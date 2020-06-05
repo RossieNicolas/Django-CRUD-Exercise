@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+<form method="POST" action="/DjangoCRUD/add">
+        {% csrf_token %}
+<br>
+    <h3>Add Person</h3>
+    <br/>
+   <div>
+    <label for="firstName">First Name:</label>
+    <div>
+      {{ form.firstName }}
+    </div>
+  </div>
+      <div>
+    <label for="lastName">Last Name:</label>
+    <div>
+      {{ form.lastName }}
+    </div>
+  </div>
+      <div>
+    <label for="age">Age:</label>
+    <div>
+      {{ form.age }}
+    </div>
+  </div>
+      <div>
+    <label for="birthday">Birthday:</label>
+    <div>
+      {{ form.birthday }}
+    </div>
+  </div>
+    <div>
+    <button type="submit">Submit</button>
+  </div>
+</form>
+</body>
+</html>

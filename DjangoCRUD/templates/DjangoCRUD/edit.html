@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit person</title>
+</head>
+<body>
+<form method="POST" action="/DjangoCRUD/update/{{person.firstName}}">
+        {% csrf_token %}
+    <h3>Edit Person</h3>
+
+    <label>First Name: </label>
+    <div>
+        <input type="text" name="firstName" id="firstName" required maxlength="50" value="{{ person.firstName }}"/>
+    </div>
+
+    <label>Last Name: </label>
+    <div>
+        <input type="text" name="lastName" id="lastName" required maxlength="50" value="{{ person.lastName }}"/>
+    </div>
+
+    <label>Age: </label>
+    <div>
+        <input type="number" name="age" id="age" required value="{{ person.age }}"/>
+    </div>
+
+    <label>birthday: </label>
+    <div>
+        <input type="date" name="birthday" id="birthday" required value="{{ person.birthday }}"/>
+    </div>
+    <div>
+    <button type="submit">Update</button>
+    </div>
+</form>
+</body>
+</html>
